@@ -1,0 +1,57 @@
+@import "../../../partials/mixins/mixins", "../../../partials/variables/variables";
+.dashboard{
+    @include flexbox;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.dashboard_first{
+    @include flexbox;
+    width: 100%;
+    img{
+        width: 233px;
+        height: 100%;
+    }
+}
+.dashboard_video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.dashboard_leagues {
+    @include flexbox;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.dashboard_leagues_information {
+    @include flexbox;
+    flex-direction: column;
+    height: 100px;
+}
+h2 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-style: italic;
+    font-weight: bold;
+    color: #887373;
+}
+body {
+    padding: 12px;
+}
+
+h1{
+    font-size: $tamañoTitle;
+}
+p{
+    margin-bottom: 12px;
+    text-align: justify;
+}
+h4{
+    color: aquamarine;
+    font-weight: bold;
+}
+h6{
+    color: #000;
+}

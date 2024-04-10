@@ -1,0 +1,59 @@
+@import "../../variables/variables";
+
+@mixin media-smlr {
+    @media (min-width: 200px) {
+        .teams {
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+            text-align: center;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        .teams_founds_lists {
+            border: 1px double gray;
+            border-radius: 7px;
+            width: 230px;
+            display: flex;
+            height: 70px;
+            flex-direction: row-reverse;
+            padding: 8px;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            h1 {
+                font-weight: bold;
+                font-size: 9px;
+            }
+            img {
+                width: 50px;
+                height: 100%;
+                display: none;
+            }
+        }
+    }
+}
+@mixin media-sm {
+    @media (min-width: 480px) {
+        .teams_founds_lists {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            align-items: center;
+            a{
+                text-decoration: none;
+                h1{
+                    font-size: 13px;
+                }
+            }
+            img{
+                display: flex;
+            }
+        }
+    }
+}
+
+@mixin media-md {
+    @media (min-width: 768px) {
+    }
+}

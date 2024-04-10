@@ -1,0 +1,33 @@
+@import "../../../partials/mixins/mixins", "../../../partials/variables/variables",
+    "../../../partials/breakpoints/breakspoinst_teams/breakpoints";
+
+.teams {
+    @include flexbox;
+    align-items: center;
+    text-align: center;
+}
+.selected_teams{
+    width: 100%;
+    display: flex;
+    margin-top: 20px;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    p{
+        font-size: 18px;
+    }
+}
+.selected_teams_select{
+    select{
+        text-align: center;
+        background-color: #263238;
+        padding: 7px;
+        color: white;
+        font-weight: bold;
+        width: 300px;
+        border-radius: 18px;
+    }
+}
+@include media-smlr;
+@include media-sm;
+@include media-md;
