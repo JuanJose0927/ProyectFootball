@@ -12,14 +12,11 @@ export class TeamsComponent implements OnInit {
   selectedCountry: string = '';
   Lteams: any[] = [];
   Lcountries: any[] = [];
-
   constructor(private router: Router, private teamsS: TeamsService, private countryS: CountriesService) { }
-
   ngOnInit(): void {
     this.getTeams();
     this.getCuntries();
   }
-
   getTeams() {
     let apiUrl = `https://www.thesportsdb.com/api/v1/json/3/search_all_teams.php?s=Soccer&c=${this.selectedCountry}`;
     this.teamsS.callTeams(apiUrl).subscribe(data => {
@@ -27,19 +24,18 @@ export class TeamsComponent implements OnInit {
       console.log("teams", this.Lteams);
     });
   }
-
   getCuntries() {
     this.countryS.callCountries().subscribe(data => {
       this.Lcountries = data.countries;
       console.log("countries", this.Lcountries);
     })
   }
-
   onCountrySelect(event: any) {
     const selectedCountry = event.target?.value;
     if (selectedCountry) {
       this.selectedCountry = selectedCountry;
       this.getTeams();
+      
     }
   }
   showTeamDetails(id: string): void {

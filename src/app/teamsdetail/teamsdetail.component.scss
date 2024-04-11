@@ -1,3 +1,6 @@
+@import "../../../partials/breakpoints/breakpoinst_teamsdetails/breakpoints";
+@import "../../../partials/mixins/mixins";
+
 .equipments{
     width: 100%;
     display: flex;
@@ -32,8 +35,7 @@ a{
     align-items: center;
     justify-content: center;
     &hover{
-        background-color: white;
-        color: #28424e;
+        @include hoverButtonDetails;
     }
 }
 
@@ -62,3 +64,5 @@ a{
         width: 180px;
     }
 }
+
+@include media-md;

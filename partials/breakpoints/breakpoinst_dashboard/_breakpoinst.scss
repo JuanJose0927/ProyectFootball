@@ -1,0 +1,43 @@
+@import "../../variables/variables";
+
+@mixin media-sm{
+    @media (max-width: 480px){
+        img{
+            display: none;
+        }
+        .dashboard_firts_title{
+            h1{
+                text-align: center;
+            }
+        }
+        .dashboard_leagues{
+            text-align: center;
+        }
+    }
+}
+
+@mixin media-md{
+    @media(max-width: 640px){
+        .dashboard_video{
+            display: none;
+        } 
+        .dashboard_first{
+            width: 233px;
+            img{
+                width: 100px;
+            }
+            h1{
+                font-size: 20px;
+            }
+            gap: 30px;
+        }
+    }
+}
+
+@mixin media-lg{
+    @media (max-width: 720px){
+        .dashboard_video{
+            width: 233px;
+        }
+    }
+}

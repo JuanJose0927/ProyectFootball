@@ -1,0 +1,15 @@
+.jugadores{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.jugadores_search{
+    input{
+        width: 400px;
+        padding: 10px;
+        border-radius: 15px;
+        text-align: center;
+        border: none;
+    }
+}

@@ -17,17 +17,6 @@
         font-size: 18px;
     }
 }
-.selected_teams_select{
-    select{
-        text-align: center;
-        background-color: #263238;
-        padding: 7px;
-        color: white;
-        font-weight: bold;
-        width: 300px;
-        border-radius: 18px;
-    }
-}
+
 @include media-smlr;
 @include media-sm;
-@include media-md;

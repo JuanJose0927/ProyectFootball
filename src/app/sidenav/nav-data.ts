@@ -6,13 +6,13 @@ export const navbarData = [
     },
     {
         routeLink: 'teams',
-        icon: 'fal fa-box-open',
+        icon: 'fal fa fa-futbol',
         label: 'Teams'
     },
     {
         routeLink: 'statistics',
-        icon: 'fal fa-chart-bar',
-        label: 'Equipment '
+        icon: 'fal fa-users ',
+        label: 'Players '
     },
     {
         routeLink: 'coupens',

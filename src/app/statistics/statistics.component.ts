@@ -1,7 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { EquipmentsService } from '../service/equipments.service';
-import { ActivatedRoute } from '@angular/router';
-import { TeamsComponent } from '../teams/teams.component';
+import { Component } from '@angular/core';
+import { HttpClient, } from '@angular/common/http';
 
 
 @Component({
@@ -11,5 +9,15 @@ import { TeamsComponent } from '../teams/teams.component';
 })
 export class StatisticsComponent {
 
+  valorInput: string = '';
+  resultadoBusqueda: any;
 
+  constructor() { }
+
+  buscarJugador() { }
+
+  obtenerJugador() {
+    let apiUrl =  `https://www.thesportsdb.com/api/v1/json/3/searchplayers.php?p=${this.valorInput}`
+
+  }
 }

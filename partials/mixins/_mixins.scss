@@ -3,3 +3,8 @@
     justify-content: space-around;
     align-items: center;
 }
+
+@mixin hoverButtonDetails{
+    background-color: white;
+    color: #28424e;
+}

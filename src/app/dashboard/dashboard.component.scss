@@ -1,13 +1,14 @@
-@import "../../../partials/mixins/mixins", "../../../partials/variables/variables";
-.dashboard{
+@import "../../../partials/mixins/mixins", "../../../partials/variables/variables",
+    "../../../partials/breakpoints/breakpoinst_dashboard/breakpoinst";
+.dashboard {
     @include flexbox;
     flex-direction: column;
     justify-content: flex-start;
 }
-.dashboard_first{
+.dashboard_first {
     @include flexbox;
     width: 100%;
-    img{
+    img {
         width: 233px;
         height: 100%;
     }
@@ -41,17 +42,21 @@ body {
     padding: 12px;
 }
 
-h1{
+h1 {
     font-size: $tamañoTitle;
 }
-p{
+p {
     margin-bottom: 12px;
     text-align: justify;
 }
-h4{
+h4 {
     color: aquamarine;
     font-weight: bold;
 }
-h6{
+h6 {
     color: #000;
 }
+
+@include media-sm;
+@include media-md;
+@include media-lg;

@@ -1,0 +1,19 @@
+@mixin media-sm{
+    @media (max-width: 480px){
+
+    }
+}
+
+@mixin media-md{
+    @media(max-width: 640px){
+        h1{
+            text-align: center;
+        }
+        .latestmatches_matches_info{
+            width: 233px;
+            img{
+                width: 100px;
+            }
+        }
+    }
+}
