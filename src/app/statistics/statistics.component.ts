@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { HttpClient, } from '@angular/common/http';
+import { PlayersService } from '../service/players.service';
 
 
 @Component({
@@ -11,13 +11,14 @@ export class StatisticsComponent {
 
   valorInput: string = '';
   resultadoBusqueda: any;
+  playersInfo: any[] = [];
 
-  constructor() { }
-
-  buscarJugador() { }
+  constructor(private playe: PlayersService) { }
 
   obtenerJugador() {
-    let apiUrl =  `https://www.thesportsdb.com/api/v1/json/3/searchplayers.php?p=${this.valorInput}`
-
+    let apiUrl = `https://www.thesportsdb.com/api/v1/json/3/searchplayers.php?p=${this.valorInput}`
+    this.playe.callPlayer(apiUrl).subscribe(data => {
+      this.playersInfo = data.player;
+    })
   }
 }

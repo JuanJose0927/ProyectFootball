@@ -1,5 +1,6 @@
 @import "../../../partials/mixins/mixins", "../../../partials/variables/variables",
-    "../../../partials/breakpoints/breakpoinst_dashboard/breakpoinst";
+    "../../../partials/breakpoints/breakpoinst_dashboard/breakpoinst", "../../../partials/variables/colors";
+
 .dashboard {
     @include flexbox;
     flex-direction: column;
@@ -14,9 +15,7 @@
     }
 }
 .dashboard_video {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexboxCenter($flex, $center);
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -36,7 +35,11 @@ h2 {
     margin-bottom: 30px;
     font-style: italic;
     font-weight: bold;
-    color: #887373;
+    color: $colorH2;
+    i {
+        font-style: inherit;
+        font-weight: inherit;
+    }
 }
 body {
     padding: 12px;
@@ -50,11 +53,11 @@ p {
     text-align: justify;
 }
 h4 {
-    color: aquamarine;
+    color: $colorH4;
     font-weight: bold;
 }
 h6 {
-    color: #000;
+    color: $colorH6;
 }
 
 @include media-sm;

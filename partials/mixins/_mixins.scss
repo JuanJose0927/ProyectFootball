@@ -1,10 +1,17 @@
-@mixin flexbox{
+@import "../variables/variables";
+@mixin flexbox {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-@mixin hoverButtonDetails{
+@mixin hoverButtonDetails {
     background-color: white;
     color: #28424e;
+}
+
+@mixin flexboxCenter($flex, $center) {
+    display: $flex;
+    align-items: $center;
+    justify-content: $center;
 }
