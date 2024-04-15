@@ -4,24 +4,24 @@
             <img src="../../assets/imgs/spo.png" alt="">
         </div>
         <div class="dashboard_firts_title">
-            <h1>WELCOME FOOTREVER</h1>
+            <h1 class="dashboard_firts_title_text">WELCOME FOOTREVER</h1>
         </div>
         <div class="dashboard_firts_title">
             <img src="../../assets/imgs/stik.png" alt="">
         </div>
     </div>
     <div class="dashboard_introduccion">
-        <p>Welcome to FootFever, your premier source for all things related to the world's most beloved sport! As a
+        <p class="dashboard_introduccion_text">Welcome to FootFever, your premier source for all things related to the world's most beloved sport! As a
             dedicated hub for football aficionados, we cater to everyone from die-hard fans to casual enthusiasts,
             offering a comprehensive platform for the latest news, in-depth analysis, and captivating insights into the
             dynamic realm of football.</p>
             
-        <p>Immerse yourself in a world where passion meets expertise, where every goal, every match, and every player's
+        <p class="dashboard_introduccion_text">Immerse yourself in a world where passion meets expertise, where every goal, every match, and every player's
             journey is celebrated and explored with unparalleled enthusiasm. Whether you're here to stay updated on your
             favorite teams, discover emerging talents, or simply indulge in the excitement of the beautiful game,
             FootFever is your ultimate destination.</p>
 
-        <p>Welcome to FootFever – where the passion for football knows no bounds, and the excitement never stops!</p>
+        <p class="dashboard_introduccion_text">Welcome to FootFever – where the passion for football knows no bounds, and the excitement never stops!</p>
     </div>
     <div class="dashboard_video">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/NljGurzPM2g?autoplay=1"
@@ -29,12 +29,12 @@
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border-radius: 19px;"></iframe>
     </div>
-    <h2>All Leagues <i class="fal fa-solid fa-trophy"></i></h2>
+    <h2 class="dashboard_tittle_leagues">All Leagues <i class="fal fa-solid fa-trophy"></i></h2>
     <div class="dashboard_leagues">
         <div class="dashboard_leagues_information" *ngFor="let league of Lleagues">
-            <h4>{{league.strLeague}}</h4>
-            <p>{{league.strSport}}</p>
-            <h6>{{league.strLeagueAlternate}}</h6>
+            <p class="dashboard_leagues_information_name">{{league.strLeague}}</p>
+            <p class="dashboard_leagues_information_sport">{{league.strSport}}</p>
+            <p class="dashboard_leagues_information_alternativeLeague">{{league.strLeagueAlternate}}</p>
         </div>
     </div>
 </div>

@@ -1,49 +1,70 @@
 @import "../../../partials/mixins/mixins", "../../../partials/variables/variables";
+@import "../../../partials/breakpoints/breakpoints_players/breakpoints";
 
-.jugadores{
-    @include flexboxCenter($flex, $center);
+.jugadores {
+    @include flexboxCenter();
     width: 100%;
     flex-direction: column;
 }
-.jugadores_search{
+.jugadores_search {
     display: flex;
     gap: 30px;
 }
-.jugadores_search_input{
+.jugadores_search_input {
     width: 400px;
     padding: 10px;
     border-radius: $borderSearch;
     text-align: center;
     border: none;
 }
-.jugadores_search_button{
+.jugadores_search_button {
     width: 100px;
     padding: 6px;
     border-radius: $borderBottom;
     cursor: pointer;
     border: none;
-    &:hover{
+    &:hover {
         background-color: white;
         color: gray;
         box-shadow: 2px 3px 2px 1px rgb(226, 226, 233);
     }
 }
-.jugadores_info{
-    @include flexboxCenter($flex, $center);
+.jugadores_info {
+    @include flexboxCenter();
     flex-direction: column;
     margin-top: 20px;
-    img{
-        width: 400px;
-        border-radius: 18px;
-    }
+    width: 100%;
+}
+.image_Image{
+   width: 400px;
+   border-radius: 18px;
 }
 
-.jugadores_info_personal{
+.jugadores_info_personal {
     display: flex;
     align-items: center;
     gap: 30px;
 }
-.jugadores_info_career{
-    @include flexboxCenter($flex, $center);
+.jugadores_info_career {
+    @include flexboxCenter();
     flex-direction: column;
 }
+.jugadores_info_position {
+    font-size: 12px;
+}
+.jugadores_info_personal_height {
+    font-size: 12px;
+}
+.jugadores_info_personal_name {
+    font-weight: bold;
+}
+.jugadores_info_personal_height,
+.jugadores_info_personal_nationality {
+    margin-bottom: 0;
+}
+
+.image_noImage{
+    width: 233px;
+    border-radius: 18px;
+}
+@include media480;

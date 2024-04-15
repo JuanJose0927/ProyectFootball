@@ -35,7 +35,7 @@ export class TeamsComponent implements OnInit {
     if (selectedCountry) {
       this.selectedCountry = selectedCountry;
       this.getTeams();
-      
+
     }
   }
   showTeamDetails(id: string): void {

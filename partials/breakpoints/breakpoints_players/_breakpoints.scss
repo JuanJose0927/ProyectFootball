@@ -1,0 +1,22 @@
+@import "../../mixins/mixins";
+
+@mixin media480 {
+    @media (max-width: 640px) {
+        .jugadores_search {
+            @include flexboxCenter();
+            flex-direction: column;
+        }
+        .jugadores_search_input {
+            width: 180px;
+        }
+        .jugadores_info {
+            img {
+                width: 200px;
+            }
+        }
+        .jugadores_info_personal {
+            @include flexboxCenter();
+            flex-direction: column;
+        }
+    }
+}

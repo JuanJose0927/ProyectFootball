@@ -10,8 +10,8 @@
     color: #28424e;
 }
 
-@mixin flexboxCenter($flex, $center) {
-    display: $flex;
-    align-items: $center;
-    justify-content: $center;
+@mixin flexboxCenter() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

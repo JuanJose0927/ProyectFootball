@@ -1,6 +1,6 @@
-<h1>Equipments</h1>
+<h1 class="title_equipments">Equipments</h1>
 <div class="equipments">
-    <div class="equipments_list"*ngFor="let equipo of listequipments">
+    <div class="equipments_list" *ngFor="let equipo of listequipments">
         <div class="equipments_info">
             <p>Season: {{equipo.strSeason}}</p>
             <img [src]="equipo.strEquipment" [alt]="">
@@ -8,17 +8,19 @@
     </div>
 </div>
 
-<h1>Latest Macthes of this team</h1>
+<h1 class="latestMatches_tittle">Latest Macthes of this team</h1>
 <div class="latestmatches">
     <div class="latestmatches_matches" *ngFor="let macth of latestMatches">
         <div class="latestmatches_matches_info">
-            <p>{{macth.strFilename}}</p>
+            <p class="latestmatches_matches_info_name">{{macth.strFilename}}</p>
             <div class="latestmatches_matches_info_images">
                 <img [src]="macth.strHomeTeamBadge" alt="">
-                <h2>{{macth.intHomeScore}} - {{macth.intAwayScore}}</h2>
                 <img [src]="macth.strAwayTeamBadge" alt="">
             </div>
+            <p class="latestmatches_matches_info_score">{{macth.intHomeScore}} - {{macth.intAwayScore}}</p>
         </div>
     </div>
 </div>
-<a routerLink="/teams">Back</a>
+<div class="button_back">
+    <a routerLink="/teams" class="return_teams ">Back</a>
+</div>

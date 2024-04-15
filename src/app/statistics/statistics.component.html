@@ -1,19 +1,24 @@
 <div class="jugadores">
-    <div class="jugadores_fund">
-        <div class="jugadores_search">
+    <div class="jugadores_search">
+        <form action="" (submit)="obtenerJugador()">
             <input type="search" placeholder="Search Player" [(ngModel)]="valorInput" class="jugadores_search_input" />
             <button (click)="obtenerJugador()" class="jugadores_search_button">SEARCH</button>
-        </div>
+        </form>
     </div>
     <div class="jugadores_info" *ngFor="let player of playersInfo">
         <div class="jugadores_info_personal">
             <h1 class="jugadores_info_personal_name">{{player.strPlayer}}</h1>
-            <h4 class="jugadores_info_personal_height">Height: {{player.strHeight}}</h4>
-            <h3 class="jugadores_info_personal_nacionality">{{player.strNacionality}}</h3>
         </div>
-        <img [src]="player.strFanart1" [alt]="">
+        <ng-container *ngIf="player && player.strFanart1; else noImage">
+            <img [src]="player.strFanart1" [alt]="player.altText || 'Imagen alternativa'" class="image_Image">
+        </ng-container>
+        <ng-template #noImage>
+            <img src="../../assets/imgs/player.png" alt="Imagen alternativa" class="image_noImage">
+        </ng-template>
         <div class="jugadores_info_career">
-            <h2 class="jugadores_info_position">{{player.strPosition}}</h2>
+            <h4 class="jugadores_info_personal_height">Height: {{player.strHeight}}</h4>
+            <h3 class="jugadores_info_personal_nationality">{{player.strNationality}}</h3>
+            <h2 class="jugadores_info_position">Position: {{player.strPosition}}</h2>
             <p class="jugadores_info_description">{{player.strDescriptionEN}}</p>
         </div>
     </div>

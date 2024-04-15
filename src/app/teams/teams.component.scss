@@ -6,14 +6,14 @@
     align-items: center;
     text-align: center;
 }
-.selected_teams{
+.selected_teams {
     width: 100%;
     margin-top: 20px;
     gap: 30px;
-    @include flexboxCenter($flex, $center);
-    p{
-        font-size: 18px;
-    }
+    @include flexboxCenter();
+}
+.selected_teams_p {
+    font-size: 18px;
 }
 
 @include media-smlr;

@@ -10,7 +10,6 @@ import { PlayersService } from '../service/players.service';
 export class StatisticsComponent {
 
   valorInput: string = '';
-  resultadoBusqueda: any;
   playersInfo: any[] = [];
 
   constructor(private playe: PlayersService) { }

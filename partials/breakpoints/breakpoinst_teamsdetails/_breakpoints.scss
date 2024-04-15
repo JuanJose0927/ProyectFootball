@@ -1,19 +1,31 @@
-@mixin media-sm{
-    @media (max-width: 480px){
-
-    }
-}
-
-@mixin media-md{
-    @media(max-width: 640px){
-        h1{
+@import "../../mixins/mixins";
+@mixin media-md {
+    @media (max-width: 640px) {
+        .title_equipments {
             text-align: center;
         }
-        .latestmatches_matches_info{
-            width: 233px;
-            img{
-                width: 100px;
+        .equipments_info{
+            width: 180px;
+        }
+        .latestmatches_matches_info {
+            width: 180px;
+            img {
+                width: 80px;
             }
+        }
+        .latestMatches_tittle{
+            text-align: center;
+            margin-top: 40px;
+            font-weight: bold;
+        }
+        .latestmatches_matches_info_name{
+            text-align: center
+        }
+        .latestmatches_matches_info_score{
+            font-size: 20px;
+        }
+        .button_back{
+            @include flexboxCenter();
         }
     }
 }

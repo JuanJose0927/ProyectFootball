@@ -15,7 +15,7 @@
     }
 }
 .dashboard_video {
-    @include flexboxCenter($flex, $center);
+    @include flexboxCenter();
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -45,19 +45,29 @@ body {
     padding: 12px;
 }
 
-h1 {
+.dashboard_firts_title_text{
     font-size: $tamañoTitle;
+    font-weight: bold;
 }
-p {
-    margin-bottom: 12px;
-    text-align: justify;
+.dashboard_firts_title_text, .dashboard_introduccion_text{
+    color: aquamarine;
 }
-h4 {
+.dashboard_tittle_leagues{
+    color:  #000;
+}
+.dashboard_leagues_information_name {
     color: $colorH4;
     font-weight: bold;
 }
-h6 {
-    color: $colorH6;
+.dashboard_leagues_information_name, .dashboard_leagues_information_sport{
+    margin-bottom: 0;
+}
+.dashboard_leagues_information_sport, .dashboard_leagues_information_alternativeLeague{
+    color: #f4dada;
+}
+.dashboard_leagues_information_alternativeLeague{
+    font-size: 12px;
+    font-weight: bold;
 }
 
 @include media-sm;

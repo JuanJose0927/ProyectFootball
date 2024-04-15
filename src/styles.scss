@@ -1,14 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
-:root {
-    color-scheme: dark;
-}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 body {
-    position: relative;
     font-family:
         system-ui,
         -apple-system,
@@ -21,7 +17,11 @@ body {
         "Open Sans",
         "Helvetica Neue",
         sans-serif;
+        background-color:  #1d5253 ;
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+    height: 100%;
+    width: 100%;
+}

@@ -5,17 +5,16 @@
     z-index: 1;
     top: 0;
     height: 100%;
-
     box-shadow: 2px 0 1.4px 0 #cfdddd;
 }
 
-.logo-conatiner {
+.sidenav_logo_conatiner {
     display: flex;
     align-items: center;
-    padding: 12px 12px 0 12px;
+    padding: 12px 12px 0;
     width: 100%;
 }
-.logo {
+.sidenav_logo_conatiner_button {
     text-align: center;
     width: 3rem;
     min-width: 3rem;
@@ -24,15 +23,23 @@
     font-size: 24px;
     font-weight: 900;
     cursor: pointer;
-    border: none;
+    background:  #9bddd3 ;
 }
-.logo-text {
+.sidenav_logo_icon{
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: black;
+    font-weight: bold;
+}
+.sidenav_logo_conatiner_text {
     margin-left: 1.5rem;
     font-size: 24px;
     font-weight: 700;
     color: white;
 }
-.btn-close {
+.sidenav_logo_conatiner_btn_close {
     margin-left: auto;
     cursor: pointer;
     width: 32px;
@@ -49,7 +56,7 @@
 .sidenav-collapsed {
     width: 16.5625rem;
 }
-.sidenav-nav {
+.sidenav_nav {
     list-style: none;
     padding: 0.938em;
     margin: 0;
@@ -60,11 +67,11 @@
     cursor: pointer;
 }
 
-.sidenav_nav_item{
+.sidenav_nav_item {
     width: 100%;
     margin-bottom: 0.635em;
     &:hover{
-        .sidenav_nav_link{
+        .sidenav_nav_link {
             background-color: white;
             color: black;
         }
@@ -79,7 +86,7 @@
     transition: color .3s ease;
     border-radius: 0.625em;
 }
-.sidenav-link-icon{
+.sidenav_nav_link_icon{
     font-size: 22px;
     width: 2rem;
     min-width: 2rem;
@@ -87,12 +94,12 @@
     text-align: center;
 }
 
-.sidenav-link-text{
+.sidenav_nav_link_text{
     margin-left: 1.5rem;
 }
 
-.sidenav-link-icon,
-.sidenav-link-text{
+.sidenav_nav_link_icon,
+.sidenav_nav_link_text{
     color: black;
 }
 

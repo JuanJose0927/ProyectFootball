@@ -1,18 +1,20 @@
 <div class="sidenav" [ngClass]=" collapsed ? 'sidenav-collapsed': ' ' ">
-    <div class="logo-conatiner">
-        <button class="logo" (click)="toogleCollapse()">S</button>
-        <div class="logo-text" *ngIf="collapsed">FOOTFRVER</div>
-        <button class="btn-close" *ngIf="collapsed" (click)="closedSidenav()">
+    <div class="sidenav_logo_conatiner">
+        <div class="sidenav_logo_conatiner_button">
+            <button class="sidenav_logo_icon" (click)="toogleCollapse()">S</button>
+        </div>
+        <div class="sidenav_logo_conatiner_text" *ngIf="collapsed">FOOTFRVER</div>
+        <button class="sidenav_logo_conatiner_btn_close" *ngIf="collapsed" (click)="closedSidenav()">
             <i class="fal fa-times close-icon"></i>
         </button>
     </div>
-    <ul class="sidenav-nav">
+    <ul class="sidenav_nav">
         <li class="sidenav_nav_item" *ngFor="let data of navData">
-            <a class="sidenav_nav_link" [routerLink]="[data.routeLink]" routerLinkActive="active"
+            <nav class="sidenav_nav_link" [routerLink]="[data.routeLink]" routerLinkActive="active"
                 [routerLinkActiveOptions]="{exact: true}">
-                <i class="sidenav-link-icon" [class]="data.icon"></i>
-                <span class="sidenav-link-text" *ngIf="collapsed">{{data.label}}</span>
-            </a>
+                <i class="sidenav_nav_link_icon" [class]="data.icon"></i>
+                <span class="sidenav_nav_link_text" *ngIf="collapsed">{{data.label}}</span>
+            </nav>
         </li>
     </ul>
 </div>

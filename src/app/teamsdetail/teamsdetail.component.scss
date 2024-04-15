@@ -2,13 +2,13 @@
 @import "../../../partials/mixins/mixins";
 
 .equipments {
-    @include flexboxCenter($flex, $center);
+    @include flexboxCenter();
     width: 100%;
     flex-wrap: wrap;
     margin-top: 12px;
 }
 .equipments_info {
-    @include flexboxCenter(flex, $center);
+    @include flexboxCenter();
     width: 400px;
     flex-direction: column;
     border: 2px solid;
@@ -19,28 +19,35 @@
         width: 150px;
     }
 }
-a {
+.equipments_info_p{
+    font-size: 17px;
+    color: white;
+    margin-bottom: 0;
+}
+.return_teams {
     color: red;
     width: 80px;
     height: 30px;
-    background-color: black;
+    background-color: #9bddd3;
     text-decoration: none;
     border-radius: $borderBottom;
-    @include flexboxCenter($flex, $center);
+    @include flexboxCenter();
     &hover {
         @include hoverButtonDetails;
     }
 }
-
+.latest_matches_title{
+    margin-top: 30px;
+}
 .latestmatches {
-    @include flexboxCenter($flex,  $center);
+    @include flexboxCenter();
     flex-direction: column;
     gap: 30px;
 }
 
 .latestmatches_matches_info {
     width: 550px;
-    @include flexboxCenter($flex,  $center);
+    @include flexboxCenter();
     flex-direction: column;
 }
 
@@ -51,6 +58,10 @@ a {
     img {
         width: 180px;
     }
+}
+.button_back{
+    margin-top: 12px;
+    margin-bottom: 30px;
 }
 
 @include media-md;
